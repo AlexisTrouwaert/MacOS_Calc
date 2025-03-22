@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MacOSCalc (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "MacOSCalc (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
