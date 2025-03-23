@@ -29,7 +29,7 @@
     <AppXManifest Include="C:\Users\alexi\Desktop\DotNET\MacOSCalc\MacOSCalc\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2025-03-23T09:28:13.671</Modified>
+      <Modified>2025-03-23T10:37:05.899</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -43,11 +43,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexi\Desktop\DotNET\MacOSCalc\MacOSCalc\bin\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MacOSCalc.dll">
       <PackagePath>MacOSCalc.dll</PackagePath>
-      <Modified>2025-03-23T09:28:13.516</Modified>
+      <Modified>2025-03-23T10:37:05.746</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexi\Desktop\DotNET\MacOSCalc\MacOSCalc\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
       <PackagePath>MacOSCalc.exe</PackagePath>
-      <Modified>2025-03-23T09:28:13.519</Modified>
+      <Modified>2025-03-23T10:37:05.749</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\alexi\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.14\runtimes\win-x64\lib\net8.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>

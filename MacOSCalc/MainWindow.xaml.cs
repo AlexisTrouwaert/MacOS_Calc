@@ -77,16 +77,24 @@ namespace MacOSCalc
 
         private void Invert(object sender, RoutedEventArgs e)
         {
-            if (Display.Text != "0")
+            if (string.IsNullOrWhiteSpace(Display.Text)) return;
+
+            string expression = Display.Text;
+            int lastOperatorIndex = expression.LastIndexOfAny(new char[] { '+', '-', '×', '÷' });
+
+            if (lastOperatorIndex == -1 || expression.StartsWith("("))
             {
-                if (Display.Text.First() == '-')
-                {
-                    Display.Text = Display.Text.Substring(1);
-                }
+                if (expression.StartsWith("(-"))
+                    Display.Text = expression.Substring(2, expression.Length -3); 
                 else
-                {
-                    Display.Text = "(-" + Display.Text + ")";
-                }
+                    Display.Text = "(-" + expression + ")";
+            }
+            else
+            {
+                string beforeLastNumber = expression.Substring(0, lastOperatorIndex + 1);
+                string lastNumber = expression.Substring(lastOperatorIndex + 1).Trim();
+
+                Display.Text = lastNumber.StartsWith("(-") ? beforeLastNumber + lastNumber.Substring(2, lastNumber.Length - 3) : beforeLastNumber + "(-" + lastNumber + ")";
             }
         }
 
