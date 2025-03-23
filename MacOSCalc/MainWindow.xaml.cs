@@ -16,6 +16,7 @@ using Microsoft.UI;
 using Microsoft.UI.Windowing;
 using Windows.Graphics;
 using System.Data;
+using System.Linq.Expressions;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -37,6 +38,8 @@ namespace MacOSCalc
 
             appWindow.Resize(new SizeInt32(317, 490));
         }
+
+        private bool lastResult = false;
 
         public void Reset(object sender, RoutedEventArgs e)
         {
@@ -72,12 +75,33 @@ namespace MacOSCalc
             }
         }
 
+        private void Invert(object sender, RoutedEventArgs e)
+        {
+            if (Display.Text != "0")
+            {
+                if (Display.Text.First() == '-')
+                {
+                    Display.Text = Display.Text.Substring(1);
+                }
+                else
+                {
+                    Display.Text = "(-" + Display.Text + ")";
+                }
+            }
+        }
+
         private void Evaluate(object sender, RoutedEventArgs e)
         {
             try
             {
+                
                 var table = new DataTable();
-                var expression = Display.Text.Replace("×", "*").Replace("÷", "/");
+                var expression = Display.Text.Replace("×", "*").Replace("÷", "/").Replace(",",".");
+                
+                while (!char.IsDigit(expression.Last()) && expression.Last() != '.')
+                {
+                    expression = expression.Substring(0, expression.Length - 1);
+                }
                 var result = table.Compute(expression, string.Empty);
                 double numericResult;
                 if (double.TryParse(result.ToString(), out numericResult))
@@ -86,12 +110,13 @@ namespace MacOSCalc
                 }
                 else
                 {
-                    Display.Text = "Erreur";
+                    Display.Text = "erreur";
                 }
+                lastResult = true;
             }
             catch
             {
-                Display.Text = "Erreur";
+                Display.Text = "erreur";
             }
         }
     }

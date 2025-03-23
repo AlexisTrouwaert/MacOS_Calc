@@ -41,7 +41,7 @@
 
             <!-- Boutons de la calculatrice -->
             <Button Grid.Row="0" Grid.Column="0" Content="AC" Style="{StaticResource TopBtn}" Click="Reset"/>
-            <Button Grid.Row="0" Grid.Column="1" Content="+/-" Style="{StaticResource TopBtn}"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="+/-" Style="{StaticResource TopBtn}" Click="Invert"/>
             <Button Grid.Row="0" Grid.Column="2" Content="%" Style="{StaticResource TopBtn}"  Click="addOperator"/>
             <Button Grid.Row="0" Grid.Column="3" Content="÷" Style="{StaticResource BtnRight}"  Click="addOperator"/>
 

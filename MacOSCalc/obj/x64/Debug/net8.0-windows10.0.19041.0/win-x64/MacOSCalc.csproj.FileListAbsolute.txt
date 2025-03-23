@@ -253,3 +253,4 @@ C:\Users\alexi\Desktop\DotNET\MacOSCalc\MacOSCalc\obj\x64\Debug\net8.0-windows10
 C:\Users\alexi\Desktop\DotNET\MacOSCalc\MacOSCalc\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\qualifiers.txt.intermediate
 C:\Users\alexi\Desktop\DotNET\MacOSCalc\MacOSCalc\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MultipleQualifiersPerDimensionFound.txt
 C:\Users\alexi\Desktop\DotNET\MacOSCalc\MacOSCalc\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\ProjectArchitectures.txt
+C:\Users\alexi\Desktop\DotNET\MacOSCalc\MacOSCalc\obj\x64\Debug\net8.0-windows10.0.19041.0\win-x64\MacOSCalc.sourcelink.json
