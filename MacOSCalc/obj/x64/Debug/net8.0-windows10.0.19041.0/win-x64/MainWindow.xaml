@@ -11,19 +11,28 @@
     >
 
     <Grid Width="300" Height="450" Background="#454543" Padding="10">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock x:ConnectionId='2' 
-            x:Name="Display"
-            Text="0" 
-            FontSize="40" 
-            Foreground="White" 
-            HorizontalAlignment="Right" 
-            VerticalAlignment="Center"
-            Margin="10"/>
-
+        <Grid Height="40" Background="Transparent" HorizontalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" Margin="10,10,0,0" HorizontalAlignment="Left">
+                <Button x:ConnectionId='22'                  Background="#FF605C" Style="{StaticResource TitleBtn}"/>
+                <Button Background="#FFBD44" Style="{StaticResource TitleBtn}"/>
+                <Button Background="#00CA4E" Style="{StaticResource TitleBtn}"/>
+            </StackPanel>
+        </Grid>
+        <Grid>
+            <TextBlock x:ConnectionId='21' 
+                x:Name="Display"
+                Text="0" 
+                FontSize="40" 
+                Foreground="White" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Center"
+                Margin="10"/>
+        </Grid>
         <Grid Grid.Row="1" Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -40,29 +49,29 @@
             </Grid.ColumnDefinitions>
 
             <!-- Boutons de la calculatrice -->
-            <Button x:ConnectionId='3' Grid.Row="0" Grid.Column="0" Content="AC" Style="{StaticResource TopBtn}"              />
-            <Button x:ConnectionId='4' Grid.Row="0" Grid.Column="1" Content="+/-" Style="{StaticResource TopBtn}"               />
-            <Button x:ConnectionId='5' Grid.Row="0" Grid.Column="2" Content="%" Style="{StaticResource TopBtn}"                     />
-            <Button x:ConnectionId='6' Grid.Row="0" Grid.Column="3" Content="÷" Style="{StaticResource BtnRight}"                     />
+            <Button x:ConnectionId='2' Grid.Row="0" Grid.Column="0" Content="AC" Style="{StaticResource TopBtn}"              />
+            <Button x:ConnectionId='3' Grid.Row="0" Grid.Column="1" Content="+/-" Style="{StaticResource TopBtn}"               />
+            <Button x:ConnectionId='4' Grid.Row="0" Grid.Column="2" Content="%" Style="{StaticResource TopBtn}"                     />
+            <Button x:ConnectionId='5' Grid.Row="0" Grid.Column="3" Content="÷" Style="{StaticResource BtnRight}"                     />
 
-            <Button x:ConnectionId='7' Grid.Row="1" Grid.Column="0" Content="7" Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='8' Grid.Row="1" Grid.Column="1" Content="8" Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='9' Grid.Row="1" Grid.Column="2" Content="9" Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='10' Grid.Row="1" Grid.Column="3" Content="×" Style="{StaticResource BtnRight}"                     />
+            <Button x:ConnectionId='6' Grid.Row="1" Grid.Column="0" Content="7" Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='7' Grid.Row="1" Grid.Column="1" Content="8" Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='8' Grid.Row="1" Grid.Column="2" Content="9" Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='9' Grid.Row="1" Grid.Column="3" Content="×" Style="{StaticResource BtnRight}"                     />
 
-            <Button x:ConnectionId='11' Grid.Row="2" Grid.Column="0" Content="4" Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='12' Grid.Row="2" Grid.Column="1" Content="5" Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='13' Grid.Row="2" Grid.Column="2" Content="6" Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='14' Grid.Row="2" Grid.Column="3" Content="-" Style="{StaticResource BtnRight}"                    />
+            <Button x:ConnectionId='10' Grid.Row="2" Grid.Column="0" Content="4" Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='11' Grid.Row="2" Grid.Column="1" Content="5" Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='12' Grid.Row="2" Grid.Column="2" Content="6" Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='13' Grid.Row="2" Grid.Column="3" Content="-" Style="{StaticResource BtnRight}"                    />
 
-            <Button x:ConnectionId='15' Grid.Row="3" Grid.Column="0" Content="1" Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='16' Grid.Row="3" Grid.Column="1" Content="2" Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='17' Grid.Row="3" Grid.Column="2" Content="3" Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='18' Grid.Row="3" Grid.Column="3" Content="+" Style="{StaticResource BtnRight}"                     />
+            <Button x:ConnectionId='14' Grid.Row="3" Grid.Column="0" Content="1" Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='15' Grid.Row="3" Grid.Column="1" Content="2" Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='16' Grid.Row="3" Grid.Column="2" Content="3" Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='17' Grid.Row="3" Grid.Column="3" Content="+" Style="{StaticResource BtnRight}"                     />
 
-            <Button x:ConnectionId='19' Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Style="{StaticResource Number0}"                 />
-            <Button x:ConnectionId='20' Grid.Row="4" Grid.Column="2" Content="." Style="{StaticResource Numbers}"                 />
-            <Button x:ConnectionId='21' Grid.Row="4" Grid.Column="3" Content="=" Style="{StaticResource BtnRight}"                 />
+            <Button x:ConnectionId='18' Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="0" Style="{StaticResource Number0}"                 />
+            <Button x:ConnectionId='19' Grid.Row="4" Grid.Column="2" Content="." Style="{StaticResource Numbers}"                 />
+            <Button x:ConnectionId='20' Grid.Row="4" Grid.Column="3" Content="=" Style="{StaticResource BtnRight}"                 />
         </Grid>
     </Grid>
 </Window>

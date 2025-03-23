@@ -17,6 +17,8 @@ using Microsoft.UI.Windowing;
 using Windows.Graphics;
 using System.Data;
 using System.Linq.Expressions;
+using System.Runtime.InteropServices;
+using WinRT.Interop;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -36,7 +38,48 @@ namespace MacOSCalc
             WindowId myWndId = Win32Interop.GetWindowIdFromWindow(hWnd);
             AppWindow appWindow = AppWindow.GetFromWindowId(myWndId);
 
-            appWindow.Resize(new SizeInt32(317, 490));
+            appWindow.Resize(new SizeInt32(300, 450));
+
+            this.ExtendsContentIntoTitleBar = true;
+            SetTitleBar(null);
+
+            appWindow.SetPresenter(AppWindowPresenterKind.Overlapped);
+
+            // Supprime les boutons de contrôle natifs (fermeture, minimiser, maximiser)
+            OverlappedPresenter? presenter = appWindow.Presenter as OverlappedPresenter;
+            if (presenter != null)
+            {
+                presenter.IsMinimizable = false;
+                presenter.IsMaximizable = false;
+                presenter.IsResizable = false;
+            }
+
+            HideSystemButtons(hWnd);
+        }
+
+        private const int GWL_STYLE = -16;
+        private const int WS_SYSMENU = 0x00080000;
+        private const int WS_CAPTION = 0x00C00000;
+
+       
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+
+       
+        private void HideSystemButtons(IntPtr hWnd)
+        {
+            int style = GetWindowLong(hWnd, GWL_STYLE);
+            style &= ~WS_SYSMENU; 
+            style &= ~WS_CAPTION; 
+            SetWindowLong(hWnd, GWL_STYLE, style);
+        }
+
+        private void CloseApp(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Exit();
         }
 
         private bool lastResult = false;

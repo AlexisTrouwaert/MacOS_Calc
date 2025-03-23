@@ -11,19 +11,28 @@
     >
 
     <Grid Width="300" Height="450" Background="#454543" Padding="10">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock 
-            x:Name="Display"
-            Text="0" 
-            FontSize="40" 
-            Foreground="White" 
-            HorizontalAlignment="Right" 
-            VerticalAlignment="Center"
-            Margin="10"/>
-
+        <Grid Height="40" Background="Transparent" HorizontalAlignment="Stretch">
+            <StackPanel Orientation="Horizontal" Margin="10,10,0,0" HorizontalAlignment="Left">
+                <Button Click="CloseApp" Background="#FF605C" Style="{StaticResource TitleBtn}"/>
+                <Button Background="#FFBD44" Style="{StaticResource TitleBtn}"/>
+                <Button Background="#00CA4E" Style="{StaticResource TitleBtn}"/>
+            </StackPanel>
+        </Grid>
+        <Grid>
+            <TextBlock 
+                x:Name="Display"
+                Text="0" 
+                FontSize="40" 
+                Foreground="White" 
+                HorizontalAlignment="Right" 
+                VerticalAlignment="Center"
+                Margin="10"/>
+        </Grid>
         <Grid Grid.Row="1" Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>

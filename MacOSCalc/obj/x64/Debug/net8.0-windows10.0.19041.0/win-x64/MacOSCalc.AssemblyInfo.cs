@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MacOSCalc")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ad85cd6309611077304fcb6492e72efff04768a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c1fa2a3817c1ac5ccb3225696b3d09bb7fce44c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("MacOSCalc")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MacOSCalc")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
